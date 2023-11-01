@@ -1,0 +1,86 @@
+/* ---------------------ESTILOS PÁGINA CONOCENOS -------------------------------------------*/
+.mainPageConocenos {
+    min-height: 80vh;
+    background-color: map-get($colores, colorFondoPrincipal);
+    display: grid;
+    grid-template-areas:
+        "titulo fotosEmpresa"
+        "laEmpresa fotosEmpresa"
+        "historia fotosEmpresa";
+    row-gap: 1%;
+    column-gap: 1%;
+    grid-template-columns: 50%;
+    grid-template-rows: 11%;
+}
+
+.tituloPaginaConocenos {
+    font-size: 3rem;
+    grid-area: titulo;
+    justify-self: left;
+    align-self: center;
+    margin: 20px;
+}
+
+.laEmpresa {
+
+    p:nth-child(2) {
+        font-size: 1.2rem;
+        border-style: solid;
+        border-width: thin;
+        text-align: center;
+    }
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    grid-area: laEmpresa;
+    margin: 0 20px;
+}
+
+.cardHistoria {
+    grid-area: historia;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    padding: 5px;
+    @include sombreadoCards;
+    min-height: fit-content;
+    font-size: 0.9rem;
+    margin: 20px;
+}
+
+#fotosEmpresa {
+    grid-area: fotosEmpresa;
+    display: grid;
+    grid-template-areas:
+        "foto1 foto2 "
+        "foto3 foto4";
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+    img {
+        width: 100%;
+        height: 85%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.fotoUno {
+    grid-area: foto1;
+}
+
+.fotoDos {
+    grid-area: foto2;
+}
+
+.fotoTres {
+    grid-area: foto3;
+}
+
+.fotoCuatro {
+    grid-area: foto4;
+}
+.piePagina {
+    min-height: 15vh;
+}

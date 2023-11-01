@@ -1,0 +1,754 @@
+@charset "UTF-8";
+/* ---------------------RESET DE ESTILOS POR DEFECTO -------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------ESTILOS GLOBALES -------------------------------------------*/
+body {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+/*--------UTILIZACIÓN DE @EXTEND--------*/
+.nombreEmpresaTurismo .marcaTurismo, .nombreEmpresa .marcaServicios, .nombreEmpresaContacto .marcaContacto, #portada .marcaInicio {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+/* ---------------------ESTILOS PERSONALIZAR NAVBAR BOOTSTRAP---------------*/
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+}
+
+#barraNaveg {
+  background-color: rgb(0, 0, 0);
+}
+
+.navbar {
+  padding: 0; /*pisar padding de Bootstrap*/
+}
+
+.nav-link {
+  color: white;
+  font-size: 1rem;
+}
+
+.nav-item :hover {
+  background-color: grey;
+  /*efecto hover que no tenía Bootstrap*/
+  color: white;
+  /*pisar efecto hover de Bootstrap para que se vea el texto*/
+}
+
+.nav-item :focus {
+  color: white;
+  /*pisar efecto focus de Boostrap*/
+}
+
+.navbar-toggler {
+  background-color: darkgrey;
+  /* pisar transparent de Bootstrap para que se vea ícono sobre fondo negro*/
+}
+
+.logoEmpresa {
+  height: 46px;
+  width: 80px;
+}
+
+/*-----------------------ESTILOS BUTTONS-----------------------------------*/
+.button {
+  border-radius: 20px;
+  color: rgb(105, 105, 105);
+  background-color: rgb(244, 200, 63);
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* ---------------------ESTILOS ICONO CHAT FIJO -----------------------------------------*/
+.iconoFijoChat {
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  bottom: 25px;
+  right: 35px;
+}
+
+/*-----------------------ESTILOS FOOTER-------------------------------------*/
+.piePagina {
+  background-color: rgb(0, 0, 0);
+  height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.piePagina p {
+  align-self: flex-end;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.redesSociales {
+  color: white;
+  flex-grow: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.redesSociales li {
+  padding: 0px 10px;
+}
+
+.iconRedes {
+  height: 30px;
+  width: 30px;
+}
+
+/* ---------------------ESTILOS PÁGINA INICIO -------------------------------------------*/
+.mainPageInicio {
+  display: grid;
+  grid-template-areas: "portada" "info";
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+}
+
+#portada {
+  grid-area: portada;
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../images/img_fondo_portada4.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "marca ." "slogan ." ". ." ". descrip" ". boton";
+  grid-template-rows: 20% 10% auto 20% 10%;
+  grid-template-columns: 70% auto;
+  row-gap: 10px;
+}
+#portada .marcaInicio {
+  font-size: 6rem;
+  grid-area: marca;
+}
+#portada h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  grid-area: slogan;
+}
+#portada p {
+  color: white;
+  font-size: 1.1rem;
+  text-align: justify;
+  grid-area: descrip;
+  width: 25vw;
+  align-self: center;
+  justify-self: center;
+}
+#portada .button {
+  grid-area: boton;
+  align-self: self-start;
+  justify-self: center;
+}
+
+#infoEmpresa {
+  grid-area: info;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(198, 195, 195);
+}
+
+.cardInfoEmpresa {
+  display: flex;
+  width: 33vw;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1%;
+}
+.cardInfoEmpresa h3 {
+  font-size: 2rem;
+}
+.cardInfoEmpresa img {
+  width: 82%;
+  height: 49%;
+  object-fit: cover;
+}
+.cardInfoEmpresa p {
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+.cardInfoEmpresa .button {
+  margin-bottom: 5px;
+}
+
+/* ---------------------ESTILOS PÁGINA CONOCENOS -------------------------------------------*/
+.mainPageConocenos {
+  min-height: 80vh;
+  background-color: rgb(198, 195, 195);
+  display: grid;
+  grid-template-areas: "titulo fotosEmpresa" "laEmpresa fotosEmpresa" "historia fotosEmpresa";
+  row-gap: 1%;
+  column-gap: 1%;
+  grid-template-columns: 50%;
+  grid-template-rows: 11%;
+}
+
+.tituloPaginaConocenos {
+  font-size: 3rem;
+  grid-area: titulo;
+  justify-self: left;
+  align-self: center;
+  margin: 20px;
+}
+
+.laEmpresa {
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  grid-area: laEmpresa;
+  margin: 0 20px;
+}
+.laEmpresa p:nth-child(2) {
+  font-size: 1.2rem;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+}
+
+.cardHistoria {
+  grid-area: historia;
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  padding: 5px;
+  box-shadow: 2px 13px 24px 2px rgba(5, 0, 0, 0.76);
+  background-color: rgb(198, 195, 180);
+  border-radius: 20px;
+  min-height: 100%;
+  min-height: fit-content;
+  font-size: 0.9rem;
+  margin: 20px;
+}
+
+#fotosEmpresa {
+  grid-area: fotosEmpresa;
+  display: grid;
+  grid-template-areas: "foto1 foto2 " "foto3 foto4";
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+#fotosEmpresa img {
+  width: 100%;
+  height: 85%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.fotoUno {
+  grid-area: foto1;
+}
+
+.fotoDos {
+  grid-area: foto2;
+}
+
+.fotoTres {
+  grid-area: foto3;
+}
+
+.fotoCuatro {
+  grid-area: foto4;
+}
+
+.piePagina {
+  min-height: 15vh;
+}
+
+/* ---------------------ESTILOS PÁGINA CONTACTO -------------------------------------------*/
+.mainPageContacto {
+  min-height: 100vh;
+  background-color: rgb(198, 195, 195);
+  display: grid;
+  grid-template-areas: "nombreEmp mapa" "datosContacto mapa" "tituloForm tituloForm" "formulario formulario";
+  justify-items: center;
+  row-gap: 19px;
+}
+
+.nombreEmpresaContacto {
+  grid-area: nombreEmp;
+}
+.nombreEmpresaContacto .marcaContacto {
+  font-size: 4rem;
+}
+
+.datosContactoEmpresa {
+  grid-area: datosContacto;
+  font-size: 1.2rem;
+}
+.datosContactoEmpresa h3:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.ubicacion {
+  grid-area: mapa;
+  align-self: center;
+}
+
+.parrafoForm {
+  grid-area: tituloForm;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form {
+  width: 80vw;
+  grid-area: formulario;
+}
+.form label {
+  font-weight: bold;
+}
+
+.contenedorGridForm {
+  width: 70vw;
+  display: grid;
+  grid-template-areas: "nombre coment" "telef coment" "mail coment" "motivo coment" "pieform pieform" "borrar enviar";
+  justify-items: end;
+  row-gap: 10px;
+}
+
+input, textarea {
+  border-radius: 5px;
+  border-style: none;
+}
+
+.formNombre {
+  grid-area: nombre;
+}
+.formNombre input {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formNombre input:focus {
+  background-color: whitesmoke;
+}
+
+.formTelef {
+  grid-area: telef;
+}
+.formTelef input {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formTelef input:focus {
+  background-color: whitesmoke;
+}
+
+.formMail {
+  grid-area: mail;
+}
+.formMail input {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formMail input:focus {
+  background-color: whitesmoke;
+}
+
+.formMotivo {
+  grid-area: motivo;
+}
+.formMotivo option {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formMotivo option:focus {
+  background-color: whitesmoke;
+}
+.formMotivo select {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formMotivo select:focus {
+  background-color: whitesmoke;
+}
+
+.formComent {
+  grid-area: coment;
+}
+.formComent textarea {
+  background-color: lightgrey;
+  transition: all 1s;
+}
+.formComent textarea:focus {
+  background-color: whitesmoke;
+}
+
+.formComent label {
+  display: block;
+}
+
+.formPie {
+  grid-area: pieform;
+  justify-self: center;
+}
+
+.formBorrar {
+  grid-area: borrar;
+  justify-self: center;
+  color: black;
+}
+.formBorrar .button {
+  color: black;
+}
+
+.formEnviar {
+  grid-area: enviar;
+  justify-self: center;
+}
+.formEnviar .button {
+  color: black;
+}
+
+/* ---------------------ESTILOS PÁGINA SERVICIOS -------------------------------------------*/
+.mainPageServicios {
+  background-color: rgb(198, 195, 195);
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+
+/*estilos para personalizar contenido de grilla Bootstrap*/
+.nombreEmpresa .marcaServicios {
+  font-size: 4rem;
+}
+
+.tituloServicios h2 {
+  font-size: 2.8rem;
+  padding-top: 10px;
+}
+
+.cardServicios .p-3 {
+  box-shadow: 2px 13px 24px 2px rgba(5, 0, 0, 0.76);
+  background-color: rgb(198, 195, 180);
+  border-radius: 20px;
+  min-height: 100%;
+  padding-bottom: 10px;
+}
+.cardServicios h3 {
+  text-decoration: underline;
+  padding-top: 5px;
+}
+.cardServicios .button {
+  transition: all 1s;
+}
+.cardServicios .button:hover {
+  border-radius: 0px;
+  color: black;
+  background-color: limegreen;
+}
+
+/* ---------------------ESTILOS PÁGINA TURISMO -------------------------------------------*/
+.mainPageTurismo {
+  padding-bottom: 20px;
+  background-color: rgb(198, 195, 195);
+}
+
+/*estilos para personalizar contenido de grilla Bootstrap*/
+.nombreEmpresaTurismo .marcaTurismo {
+  font-size: 4rem;
+}
+
+.tituloTurismo h2 {
+  font-size: 2.8rem;
+  padding-top: 10px;
+}
+
+.imagenTurismo {
+  align-self: center;
+}
+.imagenTurismo img {
+  width: 98%;
+  height: 98%;
+}
+
+.cardTurismo .p-3 {
+  border-style: dashed;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  min-height: 100%;
+}
+.cardTurismo h3 {
+  padding-top: 5px;
+}
+
+#imagenRelleno .p-3 {
+  border-style: none;
+}
+#imagenRelleno img {
+  width: 100%;
+}
+
+/*------------------------------MEDIA QUERIES-------------------------------------------*/
+/*------------------------------Tablet-----768px----------------------------------------*/
+/*----- Globales-----*/
+@media screen and (max-width: 992px) {
+  .logoEmpresa {
+    height: 28px;
+    width: 50px;
+  }
+  .piePagina {
+    height: 110px;
+    flex-flow: column nowrap;
+  }
+  .piePagina p {
+    font-size: 0.6rem;
+    order: 3;
+    align-self: center;
+  }
+  .piePagina ul {
+    color: white;
+    font-size: 0.8rem;
+  }
+  .piePagina .logoEmpresa {
+    order: 1;
+  }
+  .redesSociales {
+    order: 2;
+  }
+  .iconRedes {
+    height: 20px;
+    width: 20px;
+  }
+  .iconoFijoChat {
+    bottom: 59px;
+  }
+}
+/*---- Página Inicio ----*/
+@media screen and (max-width: 992px) {
+  #portada {
+    height: 70vh;
+    grid-template-rows: 15% 5% auto auto 10%;
+    background-position: 40% 20%;
+  }
+  #portada .marcaInicio {
+    font-size: 3rem;
+    padding: 10px;
+  }
+  #portada h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  #portada p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding-right: 15px;
+    align-self: self-end;
+  }
+  #portada .button {
+    align-self: center;
+    justify-self: center;
+  }
+  #infoEmpresa {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardInfoEmpresa {
+    width: 100vw;
+    padding: 13px 0px;
+  }
+  .cardInfoEmpresa h3 {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
+  .cardInfoEmpresa img {
+    width: 65%;
+    height: 49%;
+  }
+  .cardInfoEmpresa p {
+    width: 90%;
+  }
+}
+/*---- Página Conocenos ---- */
+@media screen and (max-width: 992px) {
+  .mainPageConocenos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+  .tituloPaginaConocenos {
+    font-size: 3rem;
+    justify-self: center;
+  }
+  .laEmpresa {
+    width: 90%;
+    margin: 5px;
+  }
+  .cardHistoria {
+    width: 90%;
+    font-size: 0.8rem;
+    margin: 10px;
+  }
+  #fotosEmpresa {
+    grid-area: fotosEmpresa;
+    display: grid;
+    grid-template-areas: "foto1 foto2" "foto3 foto4";
+    justify-content: center;
+  }
+}
+/*---- Página Servicios ----*/
+@media screen and (max-width: 992px) {
+  .mainPageServicios {
+    min-height: 100%;
+  }
+  .nombreEmpresa .marcaServicios {
+    font-size: 3rem;
+    padding-top: 10px;
+  }
+  .tituloServicios h2 {
+    font-size: 2rem;
+    padding-top: 15px;
+  }
+}
+/*---- Página Contacto ----*/
+@media screen and (max-width: 992px) {
+  .mainPageContacto {
+    grid-template-areas: "nombreEmp" "datosContacto" "mapa" "tituloForm " "formulario ";
+  }
+  .parrafoForm {
+    font-size: 1.2rem;
+  }
+  .contenedorGridForm {
+    width: 80vw;
+    grid-template-areas: "nombre" "telef " "mail " "motivo " "pieform " "coment" "borrar" "enviar";
+    row-gap: 30px;
+    justify-items: center;
+  }
+  .contenedorGridForm input, .contenedorGridForm textarea {
+    width: 50vw;
+  }
+  .contenedorGridForm .formBorrar .button {
+    width: auto;
+  }
+  .contenedorGridForm .formEnviar .button {
+    width: auto;
+  }
+  .ubicacion iframe {
+    width: auto;
+  }
+}
+/*---- Página Turismo ----*/
+@media screen and (max-width: 992px) {
+  .nombreEmpresaTurismo .marcaTurismo {
+    font-size: 2.8rem;
+    padding-top: 15px;
+  }
+  .tituloTurismo h2 {
+    font-size: 2rem;
+    padding-top: 15px;
+  }
+}
+/*--------------------------------Mobile-----320px*/
+/*---- Página Inicio ----*/
+@media screen and (max-width: 576px) {
+  #portada {
+    height: 50vh;
+    display: grid;
+    grid-template-areas: "marca" "slogan" "." "descrip" "boton";
+    grid-template-rows: 10% 7% auto 20% 15%;
+    grid-template-columns: 100%;
+    background-position: 35% 20%;
+  }
+  #portada .marcaInicio {
+    font-size: 2.3rem;
+    text-align: center;
+    padding-top: 5px;
+  }
+  #portada h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #portada p {
+    width: 95vw;
+    align-self: center;
+    justify-self: center;
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+}
+/*---- Página Conocenos ---- */
+@media screen and (max-width: 576px) {
+  .tituloPaginaConocenos {
+    font-size: 2.3rem;
+  }
+}
+/* ----Página Servicios ----*/
+@media screen and (max-width: 576px) {
+  .mainPageServicios {
+    min-height: 200vh;
+  }
+  .nombreEmpresa .marcaServicios {
+    font-size: 2.3rem;
+    padding-top: 5px;
+  }
+  .tituloServicios h2 {
+    font-size: 1.9rem;
+  }
+}
+/*---- Página Contacto ----*/
+@media screen and (max-width: 576px) {
+  .mainPageContacto {
+    row-gap: 30px;
+  }
+  .nombreEmpresaContacto .marcaContacto {
+    font-size: 2rem;
+    padding-top: 5px;
+  }
+  .datosContactoEmpresa {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+  .contenedorGridForm .formBorrar .button {
+    font-size: 1rem;
+  }
+  .contenedorGridForm .formEnviar .button {
+    font-size: 1rem;
+  }
+  #comentario {
+    width: 80vw;
+  }
+  .ubicacion iframe {
+    width: 80vw;
+  }
+}
+/*---- Página Turismo ....*/
+@media screen and (max-width: 576px) {
+  .nombreEmpresaTurismo .marcaTurismo {
+    font-size: 2rem;
+  }
+  .tituloTurismo h2 {
+    font-size: 1.8rem;
+  }
+}
+/*----------------------- Media Queries para desaparecer imagen relleno Pág Turismo---*/
+@media screen and (max-width: 767px) {
+  #imagenRelleno {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  #imagenRelleno {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

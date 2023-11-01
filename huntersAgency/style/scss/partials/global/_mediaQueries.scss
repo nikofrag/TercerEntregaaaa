@@ -1,0 +1,383 @@
+/*------------------------------MEDIA QUERIES-------------------------------------------*/
+
+/*------------------------------Tablet-----768px----------------------------------------*/
+
+/*----- Globales-----*/
+@media screen and (max-width:$breakpointTablet) {
+
+    .logoEmpresa {
+        height: 28px;
+        width: 50px;
+    }
+
+    .piePagina {
+        height: 110px;
+        flex-flow: column nowrap;
+
+        p {
+            font-size: 0.6rem;
+            order: 3;
+            align-self: center;
+        }
+
+        ul {
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        .logoEmpresa {
+            order: 1;
+        }
+    }
+
+    .redesSociales {
+        order: 2;
+    }
+
+    .iconRedes {
+        height: 20px;
+        width: 20px;
+    }
+
+    .iconoFijoChat {
+        bottom: 59px;
+    }
+}
+
+/*---- Página Inicio ----*/
+@media screen and (max-width:$breakpointTablet) {
+
+    #portada {
+        height: 70vh;
+        grid-template-rows: 15% 5% auto auto 10%;
+        background-position: 40% 20%;
+
+        .marcaInicio {
+            font-size: 3rem;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            padding-right: 15px;
+            align-self: self-end
+        }
+
+        .button {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    #infoEmpresa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardInfoEmpresa {
+        width: 100vw;
+        padding: 13px 0px;
+
+        h3 {
+            font-size: 1rem;
+            padding: 5px 0;
+        }
+
+        img {
+            width: 65%;
+            height: 49%
+        }
+
+        p {
+            width: 90%;
+        }
+    }
+}
+
+/*---- Página Conocenos ---- */
+@media screen and (max-width:$breakpointTablet) {
+
+    .mainPageConocenos {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5px;
+    }
+
+    .tituloPaginaConocenos {
+        font-size: 3rem;
+        justify-self: center;
+    }
+
+    .laEmpresa {
+        width: 90%;
+        margin: 5px;
+    }
+
+    .cardHistoria {
+        width: 90%;
+        font-size: 0.8rem;
+        margin: 10px;
+    }
+
+    #fotosEmpresa {
+        grid-area: fotosEmpresa;
+        display: grid;
+        grid-template-areas:
+            "foto1 foto2"
+            "foto3 foto4";
+        justify-content: center;
+    }
+}
+
+/*---- Página Servicios ----*/
+@media screen and (max-width:$breakpointTablet) {
+
+    .mainPageServicios {
+        min-height: 100%;
+    }
+
+    .nombreEmpresa {
+
+        .marcaServicios {
+            font-size: 3rem;
+            padding-top: 10px;
+        }
+    }
+
+    .tituloServicios {
+
+        h2 {
+            font-size: 2rem;
+            padding-top: 15px;
+        }
+    }
+}
+
+/*---- Página Contacto ----*/
+@media screen and (max-width:$breakpointTablet) {
+
+    .mainPageContacto {
+        grid-template-areas:
+            "nombreEmp"
+            "datosContacto"
+            "mapa"
+            "tituloForm "
+            "formulario ";
+    }
+
+    .parrafoForm {
+        font-size: 1.2rem;
+    }
+
+    .contenedorGridForm {
+        width: 80vw;
+        grid-template-areas:
+            "nombre"
+            "telef "
+            "mail "
+            "motivo "
+            "pieform "
+            "coment"
+            "borrar"
+            "enviar";
+        row-gap: 30px;
+        justify-items: center;
+
+        input, textarea {
+            width: 50vw;
+        }
+
+        .formBorrar {
+
+            .button {
+                width: auto;
+            }
+        }
+
+        .formEnviar {
+
+            .button {
+                width: auto;
+            }
+        }
+    }
+
+    .ubicacion iframe {
+        width: auto;
+    }
+}
+
+/*---- Página Turismo ----*/
+@media screen and (max-width:$breakpointTablet) {
+
+    .nombreEmpresaTurismo {
+
+        .marcaTurismo {
+            font-size: 2.8rem;
+            padding-top: 15px;
+        }
+    }
+
+    .tituloTurismo {
+        h2 {
+            font-size: 2rem;
+            padding-top: 15px;
+        }
+    }
+}
+
+/*--------------------------------Mobile-----320px*/
+
+/*---- Página Inicio ----*/
+@media screen and (max-width:$breakpointMobile) {
+
+    #portada {
+        height: 50vh;
+        display: grid;
+        grid-template-areas:
+            "marca"
+            "slogan"
+            "."
+            "descrip"
+            "boton";
+        grid-template-rows: 10% 7% auto 20% 15%;
+        grid-template-columns: 100%;
+        background-position: 35% 20%;
+
+        .marcaInicio {
+            font-size: 2.3rem;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        p {
+            width: 95vw;
+            align-self: center;
+            justify-self: center;
+            font-size: 1rem;
+            margin-bottom: 0px;
+        }        
+    }        
+    
+}
+
+/*---- Página Conocenos ---- */
+@media screen and (max-width:$breakpointMobile) {
+
+    .tituloPaginaConocenos {
+        font-size: 2.3rem;
+    }
+}
+
+/* ----Página Servicios ----*/
+@media screen and (max-width:$breakpointMobile) {
+    
+    .mainPageServicios {
+        min-height: 200vh;
+    }
+
+    .nombreEmpresa {
+
+        .marcaServicios {
+            font-size: 2.3rem;
+            padding-top: 5px;
+        }
+    }
+
+    .tituloServicios {
+        h2 {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+/*---- Página Contacto ----*/
+@media screen and (max-width:$breakpointMobile) {
+
+    .mainPageContacto {
+        row-gap: 30px;
+    }
+
+    .nombreEmpresaContacto {
+
+        .marcaContacto {
+            font-size: 2rem;
+            padding-top: 5px;
+        }
+    }
+
+    .datosContactoEmpresa {
+        font-size: 1rem;
+        padding: 10px;
+    }    
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .contenedorGridForm {
+        
+        .formBorrar {
+
+            .button {
+                font-size: 1rem;
+            }
+        }
+
+        .formEnviar {
+
+            .button {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    #comentario {
+        width: 80vw;
+    }
+
+    .ubicacion iframe {
+        width: 80vw;
+    }
+}
+
+/*---- Página Turismo ....*/
+@media screen and (max-width:$breakpointMobile) {
+
+    .nombreEmpresaTurismo {
+
+        .marcaTurismo {
+            font-size: 2rem;
+        }
+    }
+
+    .tituloTurismo {
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+}
+/*----------------------- Media Queries para desaparecer imagen relleno Pág Turismo---*/
+@media screen and (max-width:767px) {
+    #imagenRelleno {
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #imagenRelleno {
+        display: none;
+    }
+}

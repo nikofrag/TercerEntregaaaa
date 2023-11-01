@@ -1,0 +1,175 @@
+/* ---------------------ESTILOS PÁGINA CONTACTO -------------------------------------------*/
+.mainPageContacto {
+   min-height: 100vh;
+   background-color: map-get($colores, colorFondoPrincipal);
+   display: grid;
+   grid-template-areas:
+      "nombreEmp mapa"
+      "datosContacto mapa"
+      "tituloForm tituloForm"
+      "formulario formulario";
+   justify-items: center;
+   row-gap: 19px;
+}
+
+.nombreEmpresaContacto {
+   grid-area: nombreEmp;
+
+   .marcaContacto {
+      @extend %marca;
+      font-size: 4rem;
+   }
+}
+
+.datosContactoEmpresa {
+   grid-area: datosContacto;
+   font-size: 1.2rem;
+
+   h3:hover {
+      background-color: map-get($colores, colorFondoHeader);
+      color: map-get($colores, colorNombreEmpresa)
+   }
+}
+
+.ubicacion {
+   grid-area: mapa;
+   align-self: center;
+}
+
+.parrafoForm {
+   grid-area: tituloForm;
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.form {
+   width: 80vw;
+   grid-area: formulario;
+
+   label{
+      font-weight: bold;
+   }
+}
+
+.contenedorGridForm {
+   width: 70vw;
+   display: grid;
+   grid-template-areas:
+      "nombre coment"
+      "telef coment"
+      "mail coment"
+      "motivo coment"
+      "pieform pieform"
+      "borrar enviar";
+   justify-items: end;
+   row-gap: 10px;
+}
+
+input,textarea {
+   border-radius: 5px;
+   border-style: none;
+}
+
+.formNombre {
+   grid-area: nombre;
+
+   input {
+      background-color: lightgrey;
+      transition: all 1s;
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+}
+
+.formTelef {
+   grid-area: telef;
+
+   input {
+      background-color: lightgrey;
+      transition: all 1s;
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+}
+
+.formMail {
+   grid-area: mail;
+
+   input {
+      background-color: lightgrey;
+      transition: all 1s;
+      
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+}
+
+.formMotivo {
+   grid-area: motivo;
+
+   option {
+      background-color: lightgrey;
+      transition: all 1s;
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+
+   select {
+      background-color: lightgrey;
+      transition: all 1s;
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+
+}
+
+.formComent {
+   grid-area: coment;
+
+   textarea {
+      background-color: lightgrey;
+      transition: all 1s;
+
+      &:focus {
+         background-color: whitesmoke;
+      }
+   }
+}
+
+.formComent label {
+   display: block;
+}
+
+.formPie {
+   grid-area: pieform;
+   justify-self: center;
+}
+
+.formBorrar {
+   grid-area: borrar;
+   justify-self: center;
+   color: black;
+
+   .button{
+      color: black;
+   }
+}
+
+.formEnviar {
+   grid-area: enviar;
+   justify-self: center; 
+   
+   .button {
+      color: black;
+   }
+}

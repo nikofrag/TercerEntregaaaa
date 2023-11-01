@@ -1,0 +1,113 @@
+/* ---------------------RESET DE ESTILOS POR DEFECTO -------------------------------*/
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* ---------------------ESTILOS GLOBALES -------------------------------------------*/
+body {
+   font-family: 'Merriweather Sans', sans-serif;
+}
+/*--------UTILIZACIÓN DE @EXTEND--------*/
+%marca {
+   color:map-get($colores,colorNombreEmpresa );
+   font-weight: bold;
+}
+
+
+/* ---------------------ESTILOS PERSONALIZAR NAVBAR BOOTSTRAP---------------*/
+header {
+   position: sticky;
+   top: 0px;
+   z-index: 5;
+}
+
+#barraNaveg {
+   background-color: map-get($colores, colorFondoHeader);
+}
+
+.navbar {
+   padding: 0; /*pisar padding de Bootstrap*/
+}
+
+.nav-link {
+   color: white;
+   font-size: 1rem;
+}
+
+.nav-item :hover {
+   background-color: grey;
+   /*efecto hover que no tenía Bootstrap*/
+   color: white;
+   /*pisar efecto hover de Bootstrap para que se vea el texto*/
+}
+
+.nav-item :focus {
+   color: white;
+   /*pisar efecto focus de Boostrap*/
+}
+
+.navbar-toggler {
+   background-color: darkgrey;
+   /* pisar transparent de Bootstrap para que se vea ícono sobre fondo negro*/
+}
+
+.logoEmpresa {
+   height: 46px;
+   width: 80px;
+}
+/*-----------------------ESTILOS BUTTONS-----------------------------------*/
+.button {
+   border-radius: 20px;
+   color: map-get($colores, colorTextoButton);
+   background-color: map-get($colores, colorFondoButton);
+   padding: 5px;
+   text-decoration: none;
+   
+}
+/* ---------------------ESTILOS ICONO CHAT FIJO -----------------------------------------*/
+.iconoFijoChat {
+   position: fixed;
+   height: 60px;
+   width: 60px;
+   bottom: 25px;
+   right: 35px;
+}
+
+/*-----------------------ESTILOS FOOTER-------------------------------------*/
+
+.piePagina {
+   background-color: map-get($colores, colorFondoFooter);
+   height: 80px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+     
+   p {
+   align-self: flex-end;
+   color: white;
+   font-size: 0.8rem;
+        }  
+        
+}
+
+.redesSociales {
+   color: white;
+   flex-grow: 2;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+   list-style-type: none;
+     
+    li {
+     padding: 0px 10px;
+        }
+    }
+
+.iconRedes {
+   height: 30px;
+   width: 30px;
+}

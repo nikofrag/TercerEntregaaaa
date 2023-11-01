@@ -1,0 +1,57 @@
+/* ---------------------ESTILOS PÁGINA TURISMO -------------------------------------------*/
+.mainPageTurismo {   
+   padding-bottom: 20px;
+   background-color: map-get($colores, colorFondoPrincipal);
+}
+
+/*estilos para personalizar contenido de grilla Bootstrap*/
+.nombreEmpresaTurismo {
+
+   .marcaTurismo {
+      @extend %marca;
+      font-size: 4rem;
+   }
+}
+
+.tituloTurismo {
+
+   h2 {
+      font-size: 2.8rem;
+      padding-top: 10px;
+   }
+}
+
+.imagenTurismo {
+   align-self: center;
+
+   img {
+      width: 98%;
+      height: 98%;
+   }
+}
+
+.cardTurismo {
+
+   .p-3 {
+      border-style: dashed, ;
+      border-radius: 20px;
+      padding-bottom: 10px;
+      min-height: 100%;
+   }
+
+   h3 {
+      padding-top: 5px;
+   }   
+}
+
+#imagenRelleno{
+   
+   .p-3{
+      border-style: none;
+   }
+   img{
+      width: 100%;
+      
+   }
+   
+}

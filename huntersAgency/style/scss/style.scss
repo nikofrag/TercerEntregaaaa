@@ -1,0 +1,31 @@
+//---- VARIABLES
+@import "../../style/scss/partials/global/variables";
+
+//--- MAPS
+@import "../../style/scss/partials/global/maps";
+
+//---- MIXINS
+@import "../../style/scss/partials/global/mixins";
+
+//---- ESTILOS GLOBALES
+@import "../../style/scss/partials/global/global";
+
+//---- ESTILOS PÁGINA INICIO
+@import "../../style/scss/partials/pages/inicio";
+
+//---- ESTILOS PÁGINA CONOCENOS
+@import "../../style/scss/partials/pages/conocenos";
+
+//---- ESTILOS PÁGINA CONTACTO
+@import "../../style/scss/partials/pages/contacto";
+
+//---- ESTILOS PÁGINA SERVICIOS
+@import "../../style/scss/partials/pages/servicios";
+
+//--- ESTILOS PÁGINA TURISMO
+@import "../../style/scss/partials/pages/turismo";
+
+//---- MEDIA QUERIES
+@import "../../style/scss/partials/global/mediaQueries";
+
+

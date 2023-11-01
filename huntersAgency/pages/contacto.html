@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <!-------META DESCRIPTION------->
+  <meta name="descrption"
+    content="Comunicate y consultá sobre viajes y turismo desde Maipú y localidades a lo largo de la Autovía 2">
+  <!-------META KEYWORDS------------>
+  <meta name="keywords" content="VIAJES,MAIPU,TURISMO,CONSULTAS TURISTICAS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-------LINK CSS BOOTSTRAP------->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="huntersagency.com.ar" crossorigin="anonymous">
+  <!-------LINK CSS PROPIO------->
+  <link rel="stylesheet" href="../style/css/style.css">
+  <!-------FAVICON------->
+  <link rel="shortcut icon" href="../images/logo_empresa2.png" type="image/x-icon">
+  <!-------LINK GOOGLE FONTS------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,700;1,400&family=Unbounded&display=swap"
+    rel="stylesheet">
+  <title>HUNTERS AGENCY TRAVEL - Contacto</title>
+</head>
+
+<body>
+
+  <header>
+    <!-------NAVBAR DE BOOTSTRAP EXPANDIBLE CON IMAGEN ------->
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid" id="barraNaveg">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../images/logo_empresa2.png" alt="logo de Viajes Ruta 2" width="80" height="46">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <!--agregué .justify-content-end para alinear a la derecha-->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/conocenos.html">Conocenos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/turismo.html">Turismo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mainPageContacto">
+
+    <section class="nombreEmpresaContacto">
+      <h1 class="marcaContacto">HUNTERS TRAVEL AGENCY</h1>
+    </section>
+
+    <section class="datosContactoEmpresa">
+      <h3><ins>Teléfono</ins>: 2268 476767</h3>
+      <h3><ins>Celular</ins>: 2268 717171</h3>
+      <h3><ins>E-mail</ins>: info@hunterstravel.com.ar</h3>
+    </section>
+
+    <section class="ubicacion">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4139.70060631469!2d-57.882671113673815!3d-36.86293333667342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959a3b3e33f16c1f%3A0x9f1079e54082c256!2sMaipu%20buenos%20aires!5e0!3m2!1ses-419!2sar!4v1675622073573!5m2!1ses-419!2sar"
+        width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="parrafoForm">
+      <p>Para conocer tarifas, horarios, o cualquier otra consulta, enviá el formulario y te responderemos</p>
+    </section>
+
+    <section class="form">
+      <form class="contenedorGridForm" action="">
+        <div class="formNombre">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre">
+        </div>
+        <div class="formTelef">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono">
+        </div>
+        <div class="formMail">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="formMotivo">
+          <label for="motivoconsulta">Tipo de Consulta</label>
+          <select name="motivo" id="motivoconsulta">
+            <option value="inf">Solicitar información</option>
+            <option value="con">Reclamos</option>
+            <option value="pre">Presupuesto</option>
+            <option value="hor">Horarios</option>
+            <option value="otr">Otro</option>
+          </select>
+        </div>
+        <div class="formComent">
+          <label for="comentario">Escribí aquí tu consulta</label>
+          <textarea id="comentario" cols="30" rows="10" required></textarea>
+        </div>
+        <div class="formPie">
+          <label for="recibir">¿Quisieras recibir en tu e-mail novedades y promociones?</label>
+          <input type="checkbox" name="qui" id="recibir">
+        </div>
+        <div class="formBorrar">
+          <input class="button" type="reset" value="Borrar Datos">
+        </div>
+        <div class="formEnviar">
+          <input class="button" type="submit" value="Enviar Formulario">
+        </div>
+      </form>
+    </section>
+
+    <!--icono de Wathsapp para chateo -->
+    <a href="https://www.whatsapp.com/?lang=es" target="_blank"><img class="iconoFijoChat" src="../images/icono_wapp.png" alt="icono de Wathsapp"></a>
+  </main>
+
+  <footer class="piePagina">
+    <p>&#9426 www.viajesruta2.com.ar</p>
+    <ul class="redesSociales">Seguinos en Redes Sociales
+      <li><a href="https://www.facebook.com" target="_blank"><img class="iconRedes" src="../images/icono_facebook.png"
+            alt="icono facebook"></a></li>
+      <li><a href="https://www.instagram.com" target="_blank"><img class="iconRedes" src="../images/icono_instagram.png"
+            alt="icono Instagram"></a></li>
+      <li><a href="https://www.twitter.com" target="_blank"><img class="iconRedes" src="../images/icono_twitter.png"
+            alt="icono Twitter"></a></li>
+    </ul>
+    <a href="../index.html">
+      <img class="logoEmpresa" src="../images/logo_empresa2.png" alt="logo de Viajes Ruta 2">
+    </a>
+  </footer>
+
+  <!--link Bootstrap Javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="huntersagency.com.ar"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
